@@ -1,0 +1,47 @@
+.header {
+    margin-bottom: 2rem;
+    padding: 0 0 2rem;
+    .bg {
+        @extend %triangled-bg;
+        padding: .5rem;
+        margin-bottom: 1rem;
+    }
+    .title {
+        @extend %light;
+        @extend %larger;
+        margin-bottom: 0;
+        text-align: center;
+        line-height: 2.4rem;
+        text-transform: uppercase;
+        a {
+            color: $dry-tuesmon;
+        }
+    }
+    .logo {
+        display: none;
+    }
+}
+
+@media (min-width: 960px) {
+    .header {
+        .wrapper {
+            padding-left: 100px;
+            position: relative;
+        }
+        .title {
+            line-height: 2.4rem;
+            text-transform: uppercase;
+            a {
+                &:hover {
+                    @include transition(color .3s linear);
+                    color: $green-tuesmon;
+                }
+            }
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 80px;
+        }
+    }
+}
